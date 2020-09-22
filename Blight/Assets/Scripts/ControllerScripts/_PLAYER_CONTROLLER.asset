@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07ce19546d9ba884380bbb66f9b23f9c, type: 3}
+  m_Name: _PLAYER_CONTROLLER
+  m_EditorClassIdentifier: 
+  movement: {fileID: 11400000, guid: 3bd23fb38790c19468644567590a1d4f, type: 2}
+  lightAttack: {fileID: 11400000, guid: b60ab2197e22de64da4719c51faf9ab4, type: 2}
+  dash: {fileID: 11400000, guid: 5be78ad1e20aac84bb50df780a98f891, type: 2}
