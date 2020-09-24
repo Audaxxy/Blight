@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f438a022f822cd4ebe7f766d3fa578f, type: 3}
+  m_Script: {fileID: 11500000, guid: 20fa3ada8669fb0448696ff61afb6f83, type: 3}
   m_Name: WASD
   m_EditorClassIdentifier: 
   forward: 33

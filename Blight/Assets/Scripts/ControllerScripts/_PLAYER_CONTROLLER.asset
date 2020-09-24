@@ -9,6 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 52ac6d47ea647c04681c958749badc1d, type: 3}
   m_Name: _PLAYER_CONTROLLER
   m_EditorClassIdentifier: 
+  movement: {fileID: 11400000, guid: e7c13e227f57ec540b1f2e5138d730fe, type: 2}
+  lightAttack: {fileID: 11400000, guid: eeab9e928f2f40a46b226c5a5e0e891b, type: 2}
+  dash: {fileID: 11400000, guid: 7138d448af5a2fd469fee0f582fba710, type: 2}
