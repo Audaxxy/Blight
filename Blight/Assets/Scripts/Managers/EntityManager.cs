@@ -70,6 +70,11 @@ public class EntityManager
 
     public void RegisterID(IHaveAnID needsID)
     {
+        if (needsID.Written || !needsID.CanSelfAssign)
+        {
+            return;
+        }
+
         ActiveSlot newActive = null;
 
         if (Application.isEditor)
@@ -134,6 +139,11 @@ public class EntityManager
             }
         }
 
+        if (!toReturn.Written)
+        {
+            return;
+        }
+
         int returningID = toReturn.NetworkingID;
         inactiveQueue.Enqueue(allActive[returningID]);
 
@@ -194,9 +204,11 @@ public class ActiveSlot
 public interface IHaveAnID
 {
     bool Written { get; }
+    bool CanSelfAssign { get; }
     long IndividualID { get; }
     int NetworkingID { get; }
     string name { get; }
+
     ActiveSlot slot { get; }
 
     void SetSlot(ActiveSlot aSlot);

@@ -22,6 +22,8 @@ public class BaseEntity : MonoBehaviour, IHaveAnID
 
     private bool allowSelfAssignment = true;
 
+    public bool CanSelfAssign => allowSelfAssignment;
+
     protected virtual void Awake()
     {
         SelfInitialize();
@@ -34,10 +36,7 @@ public class BaseEntity : MonoBehaviour, IHaveAnID
 
     void SelfInitialize()
     {
-        if (allowSelfAssignment && !Written)
-        {
-            EntityManager.Instance.RegisterID(this);
-        }
+        EntityManager.Instance.RegisterID(this);
     }
 
     protected virtual void OnDisable()
@@ -52,10 +51,7 @@ public class BaseEntity : MonoBehaviour, IHaveAnID
 
     void SelfDestruct()
     {
-        if (Written)
-        {
-            EntityManager.Instance.UnregisterID(this);
-        }
+        EntityManager.Instance.UnregisterID(this);
     }
 
     public void SetSlot(ActiveSlot aSlot)
