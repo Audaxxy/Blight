@@ -26,7 +26,7 @@ public class EntityManager
         inactiveQueue = new Queue<ActiveSlot>();
     }
 
-    public T ForceCreateEntity<T>(T template, int tempID, long uniqueID) where T : MonoBehaviour, IHaveAnID
+    public T ForceCreateEntity<T>(T template, int tempID, long uniqueID) where T : Object, IHaveAnID
     {
         ActiveSlot newActive = null;
 
@@ -63,7 +63,7 @@ public class EntityManager
         return newEntity;
     }
 
-    T GetEntity<T>(T template) where T : MonoBehaviour, IHaveAnID
+    T GetEntity<T>(T template) where T : Object, IHaveAnID
     {
         return Object.Instantiate(template);
     }
